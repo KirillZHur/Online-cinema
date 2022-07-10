@@ -1,0 +1,15 @@
+{% extends 'index.html'}
+
+{% block main %}
+
+{% for movie in movies %}
+<div class="movie_block">
+    <div class="movie_poster"></div>
+    <div class="text-container">
+        <div class="movie_name">{{movie.name}}</div>
+        <div class="movie_name">{{movie.description}}</div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,7 +1,9 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import Movie
 
 def index_page(request):
-    return HttpResponse(404)
+    movies = Movie.objects.all()
+    return render(request, 'index.html', {'movies': movies})
 # Create your views here.
+def info_page(request):
+    return render(request,'info.html')
