@@ -1,15 +1,22 @@
-{% extends 'index.html'}
+{% extends 'index.html' %}
 
 {% block main %}
-
 {% for movie in movies %}
-<div class="movie_block">
-    <div class="movie_poster"></div>
-    <div class="text-container">
-        <div class="movie_name">{{movie.name}}</div>
-        <div class="movie_name">{{movie.description}}</div>
+    <div class="movie_block">
+        <div class="movie_text_container">
+            <div class="movie_background"></div>
+            <div class="movie_name">{{movie.name}}</div>
+            <div class="movie_desc">{{movie.description}}</div>
+            <div class="watch_button">
+                <a class="watch_button_rect" href=movies/{{movie.name}}>Просмотр</a>
+            </div>
+        </div>
+        <img src=media/{{movie.image}} style="position: relative;
+    height: 220px;
+    width: 180px;
+    left: -17%;
+    bottom: 100%;">
     </div>
-</div>
 {% endfor %}
 
 {% endblock %}

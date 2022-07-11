@@ -65,34 +65,12 @@
                 </div>
             </div>
         </div>
-        <div class="films__info"> <!-- info-->
-                <div class="block_description">
-                    <div class="location">
-                            {% block main %}
-                            {% for movie in movies %}
-                            <div class="films_name">
-                                <h3>{{ movie.name }}</h3>
-                            </div>
-                            <div class="description">
-                                <p>{{ movie.description }}</p>
-                            </div>
-                            <div class="link">
-                                    <a href="movie/{{movie.kinopoisk_id}}">
-                                        Подробнее
-                                    </a>
-                                <!--<div class="push">
-
-                                </div> -->
-                            </div>
-                            {% endfor %}
-                            {% endblock %}
-                    </div>
-                </div>
-        </div>
-        <div class="films_image">
-            <img src="./media/movie/Снимок_joBNqvP.PNG">
-        </div>
     </div>
+    <div class="_movie_list">
+        {% block main %}
+
+        {% endblock %}
+        </div>
 </section>
 </body>
 </html>
