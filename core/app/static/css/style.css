@@ -1,0 +1,410 @@
+/* Подключение шрифтов */
+
+/* jost-300 - latin_cyrillic */
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/jost-v13-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/jost-v13-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* jost-regular - latin_cyrillic */
+  @font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/jost-v13-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/jost-v13-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* jost-900italic - latin_cyrillic */
+  @font-face {
+    font-family: 'Jost';
+    font-style: italic;
+    font-weight: 900;
+    src: local(''),
+         url('../fonts/jost-v13-latin_cyrillic-900italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/jost-v13-latin_cyrillic-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* balsamiq-sans-regular - cyrillic */
+@font-face {
+    font-family: 'Balsamiq Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/balsamiq-sans-v10-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/balsamiq-sans-v10-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* balsamiq-sans-italic - cyrillic */
+  @font-face {
+    font-family: 'Balsamiq Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/balsamiq-sans-v10-cyrillic-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/balsamiq-sans-v10-cyrillic-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* balsamiq-sans-700italic - cyrillic */
+  @font-face {
+    font-family: 'Balsamiq Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/balsamiq-sans-v10-cyrillic-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/balsamiq-sans-v10-cyrillic-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+/* Единый стиль, чтобы блоки не расширялись */
+
+html{
+    box-sizing: border-box;
+  }
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin:0;
+    background-color:#180040;
+    font-family: 'Balsamiq Sans';
+    font-style: italic;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+/*Задаём сетку*/
+
+.container{
+    width: 1115px;
+    height: 1800px;
+    margin: 0 auto;
+}
+
+/* Header start */
+
+.header{
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.header__wrapper{
+    height: 80px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 107px;
+}
+
+.nav__link{
+    margin-right: 41px;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav__link:last-child{
+    margin-right: 0;
+}
+
+.nav__link:after{
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top:100%;
+    left:0;
+    content:'';
+    opacity: 0;
+}
+
+.nav__link:hover:after{
+    opacity:1;
+}
+
+/* Header end */
+
+/* Intro start */
+
+.intro__content{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    background:url(../img/popcorn.png)no-repeat;
+    background-position: left;
+}   
+.intro__title{
+    max-width: 790px;
+    width: 1117px;
+    height: 99px;
+    font-family: 'Jost';
+    font-style:italic;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2FC1FF;
+    text-shadow: 
+		-0   -3px 0   #972FFF,
+		 0   -3px 0   #972FFF,
+		-0    3px 0   #972FFF,
+		 0    3px 0   #972FFF,
+		-3px -0   0   #972FFF,
+		 3px -0   0   #972FFF,
+		-3px  0   0   #972FFF,
+		 3px  0   0   #972FFF,
+		-1px -3px 0   #972FFF,
+		 1px -3px 0   #972FFF,
+		-1px  3px 0   #972FFF,
+		 1px  3px 0   #972FFF,
+		-3px -1px 0   #972FFF,
+		 3px -1px 0   #972FFF,
+		-3px  1px 0   #972FFF,
+		 3px  1px 0   #972FFF,
+		-2px -3px 0   #972FFF,
+		 2px -3px 0   #972FFF,
+		-2px  3px 0   #972FFF,
+		 2px  3px 0   #972FFF,
+		-3px -2px 0   #972FFF,
+		 3px -2px 0   #972FFF,
+		-3px  2px 0   #972FFF,
+		 3px  2px 0   #972FFF,
+		-3px -3px 0   #972FFF,
+		 3px -3px 0   #972FFF,
+		-3px  3px 0   #972FFF,
+		 3px  3px 0   #972FFF,
+		-3px -3px 0   #972FFF,
+		 3px -3px 0   #972FFF,
+		-3px  3px 0   #972FFF,
+		 3px  3px 0   #972FFF;
+    margin-left: 30px;
+}
+.intro__cin{
+    width: 1117px;
+    height: 40px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffd501;
+    text-shadow: .01em 0 #972FFF, -.01em 0 #972FFF, 0 .01em #972FFF, 0 -.01em #972FFF;
+    padding-left:150px;
+    margin-bottom: -15px;
+}
+.intro__block{
+    margin-top: -180px;
+}
+
+.center{
+    width: 955px;
+    height: 265px;
+    left: 323px;
+    top: 410px;
+    align-items: center;
+    justify-content:space-between;
+    display: flex; 
+    margin-top: -100px;
+    margin-left: 120px;
+}
+.block{
+    margin-top: 180px;
+}
+.btn{
+    display: inline-flex;
+    position: absolute;
+    color: #dfc029;
+    min-width: 387px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Jost';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 75px;
+    text-align : Center;
+    text-shadow: 
+		-0   -0.4px 0   #e2c21f,
+		 0   -0.4px 0   #e2c21f,
+		-0    0.4px 0   #e2c21f,
+		 0    0.4px 0   #e2c21f,
+		-0.4px -0   0   #e2c21f,
+		 0.4px -0   0   #e2c21f,
+		-0.4px  0   0   #e2c21f,
+		 0.4px  0   0   #e2c21f,
+		-0.4px -0.4px 0   #e2c21f,
+		 0.4px -0.4px 0   #e2c21f,
+		-0.4px  0.4px 0   #e2c21f,
+		 0.4px  0.4px 0   #e2c21f,
+		-0.4px -0.4px 0   #e2c21f,
+		 0.4px -0.4px 0   #e2c21f,
+		-0.4px  0.4px 0   #e2c21f,
+		 0.4px  0.4px 0   #e2c21f;
+    background: #972FFF;
+    mix-blend-mode: normal;
+    box-shadow: 0px 9px 50px rgba(47, 193, 255, 0.8);
+    border-radius: 50px;
+}
+.btn:hover{
+    background-color: #972fff8e;
+}
+
+.about{
+    margin-left: 300px;
+}
+.text{
+    position: absolute;
+    width: 410px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+.desc{
+    margin-bottom: -20px;
+    color:#FFFFFF;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    text-decoration-line: underline;
+}
+
+/* movie list*/
+
+._movie_list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 36px;
+    position: absolute;
+    width: 1200px;
+    height: 220px;
+    left: 225px;
+    top: 1005px;
+}
+
+.movie_background{
+    position: absolute;
+    height = 220px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #D9D9D9;
+}
+
+.movie_block{
+    width: 1200px;
+    height: 220px;
+    flex: None;
+    flex-grow: 1;
+}
+
+/* movie poster */
+.movie_image{
+    position: absolute;
+    left: 0%;
+    right: 87.26%;
+    top: 0%;
+    bottom: 5.91%;
+}
+
+.movie_text_container{
+    position: relative;
+    height: 220px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.movie_name{
+    position: absolute;
+    left: 18.99%;
+    right: 2.1%;
+    top: 7.73%;
+    bottom: 74.55%;
+    font-family: 'Balsamiq Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    color: #00317B;
+}
+
+.movie_desc{
+    position: absolute;
+    left: 10%;
+    right: 0%;
+    top: 31.36%;
+    bottom: 40%;
+    font-family: 'Balsamiq Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.watch_button{
+    position: absolute;
+    left: 75.75%;
+    right: 11.05%;
+    top: 66.36%;
+    bottom: 10%;
+}
+
+.watch_button_rect
+{
+    position: absolute;
+    height: 35px;
+    left: 67.75%;
+    right: -0.95%;
+    top: 47.36%;
+    bottom: 10%;
+    font-size: 28px;
+    width: 160px;
+    background: #2FC1FF;
+    border-radius: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    font-family: 'Balsamiq Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+}
+
+.watch_button_rect:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
